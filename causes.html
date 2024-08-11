@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Causes and Solutions of Reflected XSS Vulnerability</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js"></script>
+</head>
+<body>
+  <header>
+    <h1>Reflected XSS Vulnerability</h1>
+  </header>
+  <nav>
+    <ul>
+        <li><a href="index.html">Explanation & Impact</a></li>
+        <li><a href="causes.html">Causes & Solutions</a></li>
+        <li><a href="demonstration.html">Demonstration</a></li> 
+    </ul>
+  </nav>
+  <main>
+    <h2>Causes and Solutions of Reflected XSS Vulnerability</h2>
+    <p>The causes of Reflected XSS vulnerability are typically related to improper handling of user input in web applications. This can occur when:</p>
+    <ul>
+      <li>User input is not validated or sanitised properly</li>
+      <li>User input is included in a web page without proper encoding or escaping</li>
+      <li>User input is reflected back to the user without any validation or sanitization</li><br>
+    </ul>
+    <p>To prevent Reflected XSS vulnerability, web developers can take several steps, including:</p>
+    <ul>
+      <li>Validating and sanitising user input</li>
+      <li>Properly encoding or escaping user input before including it in a web page</li>
+      <li>Using security mechanisms such as Content Security Policy (CSP) to restrict the sources of executable scripts [1]</li>
+      <li>Implementing secure coding practices and following security guidelines [3]</li>
+    </ul>
+    <p>By taking these steps, web developers can significantly reduce the risk of Reflected XSS vulnerability in their web applications.</p>
+    <div class="references">
+      <h3>References</h3>
+    <ol>
+      <li>Invicti (2022) What is cross-site scripting and how can you fix it?, Acunetix. Available at: https://www.acunetix.com/websitesecurity/cross-site-scripting/ (Accessed: 25 May 2023). </li>
+      <li>Lutkevich, B. and Rosencrance, L. (2021) What is cross-site scripting (XSS)? how to prevent and fix it. | TechTarget. Available at: https://www.techtarget.com/searchsecurity/definition/cross-site-scripting (Accessed: 25 May 2023). </li>
+      <li>N/A (2023) Cross-site scripting (XSS) - impacts and its preventive measures. | Security Pilgrim Available at: https://securitypilgrim.com/cross-site-scripting-xss-impacts-and-preventive-measures/ (Accessed: 26 May 2023).</li>
+      <li>N/A (2022) Reflected XSS: How to prevent a non-persistent attack. | Imperva. Available at: https://www.imperva.com/learn/application-security/reflected-xss-attacks/ (Accessed: 26 May 2023). </li>
+    </ol>
+    </div>
+  </main>
+  <footer>
+    <p>&copy; 2023 Reflected XSS. All rights reserved.</p>
+  </footer>
+</body>
+</html>
+

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Reflected XSS Vulnerability</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js"></script>
+</head>
+<body>
+  <header>
+    <h1>Reflected XSS Vulnerability</h1>
+  </header>
+  <nav>
+    <ul>
+      <li><a href="index.html">Explanation & Impact</a></li>
+      <li><a href="causes.html">Causes & Solutions</a></li>
+      <li><a href="demonstration.html">Demonstration</a></li>
+    </ul>
+  </nav>
+  <main>
+    <h2>Explanation of Reflected XSS Vulnerability</h2>
+    <p>Cross-Site Scripting (XSS) is a type of security vulnerability that allows an attacker to inject malicious code into a web page viewed by other users. Reflected XSS is a specific type of XSS vulnerability that occurs when user input is not properly sanitised and is included in the output of a web page in an unescaped form. When a victim clicks on a specially crafted link, the malicious script is executed in the victim's browser. [7]</p>
+    <p>Reflected XSS is different from Stored XSS, where the malicious script is permanently stored on the web server and is executed every time the page is loaded, and DOM-based XSS, where the vulnerability is in the client-side script and is not related to server-side code. [6]</p>
+    <p>Reflected XSS attacks can be used to steal sensitive user data, such as login credentials, credit card numbers, and personal information. They can also be used to spread malware and launch attacks against other users, such as by hijacking their sessions or redirecting them to phishing sites. [6]</p>
+    <p>Web developers can prevent Reflected XSS by properly validating and sanitising user input, encoding output to prevent scripts from being executed, and implementing security mechanisms such as Content Security Policy (CSP) to restrict the sources of executable scripts. [1]</p>
+  
+    <h2>Impact of Reflected XSS Vulnerability</h2>
+    <p>The impact of Reflected XSS vulnerability can be severe, as it allows an attacker to execute arbitrary code in the context of a victim's web browser. This can lead to a range of security risks, including:</p>
+    <ul>
+      <li>Theft of sensitive data, such as login credentials or credit card information [6]</li>
+      <li>Malware infection of the victim's computer or device</li>
+      <li>Damage of the vulnerable web page</li>
+      <li>Unwanted actions performed on behalf of the victim, such as sending spam emails or making unauthorized financial transactions</li>
+    </ul>
+    <p>It is important for web developers to be aware of this vulnerability and to take steps to prevent it in their web applications.</p>
+    <div class="references">
+      <h3>References</h3>
+    <ol>
+      <li>Invicti (2022) What is cross-site scripting and how can you fix it? | Acunetix. Available at: https://www.acunetix.com/websitesecurity/cross-site-scripting/ (Accessed: 25 May 2023). </li>
+      <li>N/A (2020) What is a cross-site scripting (XSS) attack? | Positive Technologies. Available at: https://www.ptsecurity.com/ww-en/analytics/knowledge-base/what-is-a-cross-site-scripting-xss-attack/ (Accessed: 25 May 2023). </li>
+      <li>S, Kirsten. et al. (no date) Cross site scripting (XSS), Cross Site Scripting (XSS) | OWASP Foundation. Available at: https://owasp.org/www-community/attacks/xss/ (Accessed: 25 May 2023). </li>
+      <li>N/A (no date) What is reflected XSS (Cross-Site Scripting)? | PortSwigger. Available at: https://portswigger.net/web-security/cross-site-scripting/reflected (Accessed: 25 May 2023). </li>
+      <li>N/A (2023) What is cross-site scripting? | Sucuri. Available at: https://sucuri.net/guides/what-is-cross-site-scripting/ (Accessed: 25 May 2023). </li>
+      <li>N/A. (2020) The impact of cross-site scripting vulnerabilities and their prevention. | Cypress Data Defence. Available at: https://www.cypressdatadefense.com/blog/cross-site-scripting-vulnerability/ (Accessed: 25 May 2023).</li>
+      <li>N/A (2022) Reflected XSS: How to prevent a non-persistent attack. | Imperva. Available at: https://www.imperva.com/learn/application-security/reflected-xss-attacks/ (Accessed: 26 May 2023). </li>
+    </ol>
+    </div>
+  </main>
+  <footer>
+    <p>&copy; 2023 Reflected XSS. All rights reserved.</p>
+  </footer>
+</body>
+</html>

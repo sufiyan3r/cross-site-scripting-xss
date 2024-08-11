@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Demonstration of Reflected XSS Vulnerability</title>
+  <link rel="stylesheet" href="style.css">
+  
+</head>
+<body>
+  <header>
+    <h1>Reflected XSS Vulnerability</h1>
+  </header>
+  <nav>
+    <ul>
+        <li><a href="index.html">Explanation & Impact</a></li>
+        <li><a href="causes.html">Causes & Solutions</a></li>
+        <li><a href="demonstration.html">Demonstration</a></li>
+    </ul>
+  </nav>
+  <main>
+    <h2>Demonstration of Reflected XSS Vulnerability</h2>
+    <p>To demonstrate the Reflected XSS vulnerability, you can try the following steps:</p>
+    <ol>
+      <li>The current web page comprises of 2 forms. One is protected and the other is vulnerable.</li>
+      <li>Copy & enter the following code into the 'full name' input box below [5]:</li>
+      <code>&lt;script&gt;alert("Hello world!");&lt;/script&gt;</code>
+      <li>Submit the form and observe the results</li><br>
+    </ol>
+    <h3>Expectation of Results</h3>
+    <p>If the web application is 'protected' from Reflected XSS, the alert message will not be executed and instead it will prompt the user with a message on top of the screen, protecting the user to security risks.</p>    
+    <p>If the web application is 'vulnerable' to Reflected XSS, the alert message will be executed when the search results page is loaded, potentially exposing the user to security risks.</p><br>
+    <h3>Testing for Vulnerability</h3>
+        <p>Use the form below to test for Reflected XSS vulnerability:</p>
+        <h1>Contact Us Form</h1>
+        <form class="contact-form" action="" method="post">
+          <h2>Protected Version</h2>
+          <p>Our Team will get back to you within 24 Hours!</p>
+          <label for="name">Full Name:</label>
+          <input type="text" id="name" name="name" required>
+        
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required>
+        
+          <button type="submit">Submit</button>
+        </form>
+
+        <form class="contact-form2" action="" method="post">
+          <h2>Vulnerable Version</h2>
+          <p>Our Team will get back to you within 24 Hours!</p>
+          <label for="name">Full Name:</label>
+          <input type="text" id="name" name="name" required>
+        
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required>
+        
+          <button type="submit">Submit</button>
+        </form>
+          <div id="output"></div>
+</main>
+  <footer>
+    <p>&copy; 2023 Reflected XSS. All rights reserved.</p>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
+
+<!--
+<form onsubmit="testXSS(); return false;">
+  <label for="input">Enter your name:</label>
+  <input type="text" id="input" name="input">
+  <button type="submit">Submit</button>
+</form>
+
+-->
